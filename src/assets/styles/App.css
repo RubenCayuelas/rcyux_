@@ -1,3 +1,27 @@
+@font-face {
+  font-family: 'DEM-MOMono';
+  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-300.otf') format('opentype');
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DEM-MOMono';
+  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-400.otf') format('opentype');
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: 'DEM-MOMono';
+  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-700.otf') format('opentype');
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
 .App {
   text-align: center;
 }
@@ -26,6 +50,14 @@
 
 .App-link {
   color: #61dafb;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: 'DEM-MOMono', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  background-color: #0e0e0e;
+  color: #ffffff;
 }
 
 @keyframes App-logo-spin {
