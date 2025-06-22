@@ -13,6 +13,11 @@ export function HomePage() {
       </div>
       <div className="content">
         <h2>Hello World</h2>
+        <div>
+          <p>
+            . . .
+          </p>
+        </div>
       </div>
     </div>
   );
