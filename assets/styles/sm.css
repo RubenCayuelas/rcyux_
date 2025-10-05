@@ -1,0 +1,31 @@
+@media screen and (max-width: 576px) {
+  .App{
+    .background {
+      height: 20vh;
+
+      h1 {
+        font-size: 10vw;
+
+        img {
+          width: 6vw;
+        }
+      }
+    }
+
+  }
+}
+
+@media screen and (max-width: 375px) {
+  .App{
+    .background {
+      h1 {
+        font-size: 13vw;
+
+        img {
+          width: 8vw;
+        }
+      }
+    }
+
+  }
+}

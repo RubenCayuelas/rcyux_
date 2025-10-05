@@ -1,0 +1,40 @@
+.background {
+  width: 100%;
+  height: 673px;
+  background-image: url('../images/index_background_short.jpg');
+  background-position: center;
+  background-size: cover;
+  background-attachment: fixed;
+
+  h1 {
+    margin: 0;
+    font-size: 8rem;
+    color: #ffffff;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-content: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    background-color: #0000007e;
+
+    img {
+      width: 5rem;
+      margin-right: .9rem;
+    }
+  }
+}
+
+.content {
+  margin: 5% 5% 0 5%;
+
+  h2 {
+    text-align: left;
+    font-weight: 700;
+    font-size: 2.5rem;
+  }
+
+  p {
+    font-size: 1.3rem;
+  }
+}
