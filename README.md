@@ -2,49 +2,45 @@
 
 > *A detailed project description will be added in the future.*
 
+## Requirements
 
----
+**Before getting started, make sure you have the following installed:**
 
-## Requisitos
+- [Ruby](https://www.ruby-lang.org/) (version 2.7+ recommended)  
+- [Bundler](https://bundler.io/)
+- [Jekyll](https://jekyllrb.com)
 
-**Antes de comenzar, asegúrate de tener instalado:**
-
-- [Ruby](https://www.ruby-lang.org/) (>= 2.7 recomendado)  
-- [Bundler](https://bundler.io/)  
-- Jekyll (`gem install jekyll`)
-
-**Puedes verificar tus versiones con:**
+**You can check your installed versions with:**
 
 ```
-   ruby -v
-   jekyll -v
-   bundler -v
+ruby -v
+jekyll -v
+bundler -v
 ```
----
 
-## Instalación
+## Installation
 
-1. **Clone the repository**
+1. **Clone the repository:**
 
    ```
    git clone https://github.com/RubenCayuelas/rcyux_.git
    ```
 
-2. **Navigate into the project directory**
+1. **Navigate into the project directory:**
 
    ```
    cd rcyux_
    ```
 
-3. **Install dependencies**
+3. **Install the dependencies:**
 
    ```
    bundle install
    ```
----
 
-## Licencia
-Todo el contenido está licenciado bajo [Creative Commons BY-NC 4.0.](./LICENSE.txt)
+## License
 
-- 📸 Instagram:  [@rcyux_](https://www.instagram.com/rcyux_)
-- 🌐 Web: [rcyux.com](https://rubencayuelas.github.io/rcyux_)
+All content is licensed under [Creative Commons BY-NC 4.0](./LICENSE.txt).
+
+- Instagram: [@rcyux_](https://www.instagram.com/rcyux_)  
+- Website: [rcyux.com](https://rubencayuelas.github.io/rcyux_)
