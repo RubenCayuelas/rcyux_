@@ -1,0 +1,39 @@
+<!-- <section class="posts-list">
+  {% for post in site.posts %}
+    <article class="post-preview mb-4">
+      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+      <p>{{ post.excerpt }}</p>
+      <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+    </article>
+  {% endfor %}
+</section> -->
+<style>
+  .posts-list {
+    margin: 5% 5% 0;
+  }
+</style>
+
+<section class="posts-list">
+  {% if site.posts.size == 0 %}
+    <div class="posts-container" data-empty="true">
+      <h2>No posts found.</h2>
+    </div>
+  {% else %}
+    <div class="posts-container">
+      <h2>Showing {{ site.posts.size }} posts.</h2> <!-- ToDo: Remove this later -->
+      {% for post in site.posts %}
+  
+  
+        <article class="post-preview mb-4">
+          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
+          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
+          <p>{{ post.excerpt }}</p>
+          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
+        </article>
+  
+  
+      {% endfor %}
+    </div>
+  {% endif %}
+</section>

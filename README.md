@@ -38,6 +38,12 @@ bundler -v
    bundle install
    ```
 
+4. **Exec jekyll server**
+
+   ```
+   bundle exec jekyll s
+   ```
+
 ## License
 
 All content is licensed under [Creative Commons BY 4.0](https://creativecommons.org/licenses/by/4.0/).

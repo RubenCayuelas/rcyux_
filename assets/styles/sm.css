@@ -1,5 +1,5 @@
 @media screen and (max-width: 576px) {
-  .App{
+  .homepage{
     .background {
       height: 20vh;
 
@@ -16,7 +16,7 @@
 }
 
 @media screen and (max-width: 375px) {
-  .App{
+  .homepage{
     .background {
       h1 {
         font-size: 13vw;

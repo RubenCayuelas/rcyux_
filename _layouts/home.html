@@ -14,17 +14,17 @@
     <link rel="stylesheet" href="{{ '/assets/styles/lg.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/xl.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/sm.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles/HomePage.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles/Footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/layouts/HomePage.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/includes/Post.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/includes/Footer.css' | relative_url }}">
   </head>
-  <body class="App">
-
-    <!-- Image -->
-    <div data-testid="homepage">
+  <body class="homepage">
+    <div>
+      <!-- Index Banner -->
       <div class="background text-center">
         <h1>
           <img src="{{ '/assets/images/instagram_logo.svg' | relative_url }}" class="instagram-logo" alt="Instagram Logo"/>
-          rcyux_
+          {{ page.title }}
         </h1>
       </div>
 
@@ -34,14 +34,16 @@
           <p class="text-center text-sm-start col-md-9 pe-sm-5 pe-0">
             {{ page.description.text }}
           </p>
-          <img class="col-lg-2 col-md-3 d-md-flex d-none img-fluid" src="{{ '/assets/images/index-content.jpg' | relative_url }}" alt="Imagen estatua" />
+          <img class="col-lg-2 col-md-3 d-md-flex d-none img-fluid" src="{{ page.description.img | relative_url }}" alt="Imagen estatua" />
         </div>
+
+        <!-- Posts -->
+        <h2>Latest Posts</h2>
+        {% include posts.html %}
       </div>
     </div>
 
-    <!-- Posts -->
-    {% include posts.html %}
-
+    <br><br><br> <!-- ToDo: Delete this when footer not WIP -->
     <!-- Footer -->
     {% include footer.html %}
   </body>
