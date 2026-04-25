@@ -2,25 +2,56 @@
 <html lang="es">
   <head>
     <meta charset="UTF-8">
-    <title>{{ page.title | default: site.title }}</title>
+    <title>{{ page.title }} — {{ site.title }}</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon"/>
 
     <!-- Bootstrap -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
 
+    <!-- Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Space+Mono:ital,wght@0,400;0,700;1,400&display=swap" rel="stylesheet">
+
     <!-- Styles -->
     <link rel="stylesheet" href="{{ '/assets/styles/App.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/lg.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/xl.css' | relative_url }}">
     <link rel="stylesheet" href="{{ '/assets/styles/sm.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles/PostPage.css' | relative_url }}">
-    <link rel="stylesheet" href="{{ '/assets/styles/Footer.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/layouts/PostPage.css' | relative_url }}">
+    <link rel="stylesheet" href="{{ '/assets/styles/includes/Footer.css' | relative_url }}">
   </head>
-  <body class="App">
+  <body class="post-page">
+    <header class="post-header" {% if page.cover_image %}style="background-image: url('{{ page.cover_image | relative_url }}')"{% endif %}>
+      <a href="{{ '/' | relative_url }}" class="post-back">← {{ site.title }}</a>
+      <div class="post-header__info">
+        <h1 class="post-header__title">{{ page.title }}</h1>
+        <p class="post-header__meta">
+          <span>{{ page.date | date: "%d.%m.%Y" }}</span>
+          {% if page.location %}<span class="post-header__location">{{ page.location }}</span>{% endif %}
+        </p>
+      </div>
+    </header>
 
-    {{ content }}
+    <!-- Text content (optional) -->
+    {% capture post_content %}{{ content | strip_html | strip }}{% endcapture %}
+    {% if post_content != "" %}
+      <section class="post-content">
+        {{ content }}
+      </section>
+    {% endif %}
 
+    <!-- Image gallery -->
+    {% if page.images %}
+      <section class="post-gallery">
+        {% for image in page.images %}
+          <div class="post-gallery__item post-gallery__item--{{ image.type | default: 'horizontal' }}">
+            <img src="{{ image.src | relative_url }}" alt="{% if image.alt %}{{ image.alt }}{% else %}{{ page.title }}{% endif %}" loading="lazy" />
+          </div>
+        {% endfor %}
+      </section>
+    {% endif %}
+
+    <br><br><br>
     <!-- Footer -->
     {% include footer.html %}
   </body>

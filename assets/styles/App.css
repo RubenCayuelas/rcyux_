@@ -4,6 +4,7 @@
   font-weight: 300;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 @font-face {
@@ -12,6 +13,7 @@
   font-weight: 400;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 @font-face {
@@ -20,12 +22,13 @@
   font-weight: 700;
   font-style: normal;
   font-display: swap;
+  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 body {
   margin: 0;
   padding: 0;
-  font-family: 'DEM-MOMono', Arial, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
+  font-family: 'DEM-MOMono', 'Space Mono', monospace, sans-serif, 'Apple Color Emoji', 'Segoe UI Emoji', 'Segoe UI Symbol';
   background-color: #0e0e0e;
   color: #ffffff;
 }
