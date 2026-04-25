@@ -1,4 +1,12 @@
 @media screen and (max-width: 576px) {
+  .post-content {
+    margin: 3rem 0 !important;
+  }
+
+  .post-header {
+    height: 50vh !important;
+  }
+
   .homepage{
     .background {
       height: 20vh;
