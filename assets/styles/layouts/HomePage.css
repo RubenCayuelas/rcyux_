@@ -25,6 +25,44 @@
   }
 }
 
+.description-wrapper {
+  flex-direction: column !important;
+  align-items: center;
+}
+
+.description-collage {
+  display: flex;
+  gap: 3px;
+  flex-shrink: 0;
+  margin-top: 2rem;
+  width: clamp(260px, 50vw, 480px);
+  height: clamp(260px, 50vw, 480px);
+}
+
+.description-collage .collage__vertical {
+  flex: 1;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  min-width: 0;
+}
+
+.description-collage .collage__squares {
+  display: flex;
+  flex-direction: column;
+  gap: 3px;
+  flex: 1;
+  min-width: 0;
+}
+
+.description-collage .collage__squares img {
+  width: 100%;
+  flex: 1;
+  object-fit: cover;
+  display: block;
+  min-height: 0;
+}
+
 .content {
   margin: 5% 5% 0 5%;
 

@@ -33,7 +33,8 @@
   background-size: cover;
   background-position: center;
   background-color: #1a1a1a;
-  transition: transform 0.4s ease;
+  filter: grayscale(100%);
+  transition: transform 0.4s ease, filter 0.4s ease;
 }
 
 .post-card__image--empty {
@@ -42,6 +43,7 @@
 
 .post-card:hover .post-card__image {
   transform: scale(1.04);
+  filter: grayscale(0%);
 }
 
 /* Overlay on hover */

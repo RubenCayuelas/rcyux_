@@ -7,7 +7,7 @@
 
 layout: post
 
-# Title shown in the hero and in the home card
+# Title shown in the header and in the home card
 title: "Place Name"
 
 # Post date (not necessarily the date of the visit)
@@ -21,11 +21,11 @@ categories: urbex
 # permalink: /urbex/place-name/
 
 # Image used:
-#   - As the full-screen hero background on the post page
+#   - As the full-screen header background on the post page
 #   - As the background image on the home card
 cover_image: /assets/images/posts/place-name/cover.jpg
 
-# Location shown next to the date in the hero and the card
+# Location shown next to the date in the header and the card
 # Free format: city, type of place, country...
 location: "City, Country"
 
@@ -79,7 +79,7 @@ images:
 <!-- ───────────────────────────────────────────────────────
      POST BODY TEXT (optional)
      If left empty, the text section will not be rendered.
-     If filled, it appears between the hero and the gallery.
+     If filled, it appears between the header and the gallery.
      Standard Markdown is supported.
      ─────────────────────────────────────────────────────── -->
 

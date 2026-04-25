@@ -1,5 +1,17 @@
 @media screen and (min-width: 1200px) {
   .homepage {
+    .description-wrapper {
+      flex-direction: row !important;
+      align-items: flex-start;
+    }
+
+    .description-collage {
+      margin-top: 0;
+      align-self: flex-start;
+      width: clamp(260px, 28vw, 480px);
+      height: clamp(260px, 28vw, 480px);
+    }
+
     .background {
       height: 100vh;
     }

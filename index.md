@@ -4,17 +4,24 @@ layout: home
 title: rcyux_
 description: 
   title: 'Urbex: Memorias Olvidadas'
-  img: /assets/images/index-content.jpg
+  # img: /assets/images/index-content.jpg
+  collage:
+    - src: /assets/images/index-content.jpg
+      alt: Estatua
+    - src: /assets/images/index-content-01.jpg
+      alt: Mansión abandonada
+    - src: /assets/images/index-content-02.jpg
+      alt: Cocina de casa abandonada
   text: >
-    Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-    Sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.
-    Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.
-    Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur.
-    Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
+    Soy rcyux, aficionado del urbex. Llevo años visitando lugares que el tiempo abandonó a su suerte — fábricas industriales,
+    hospitales psiquiátricos, estaciones de tren, edificios militares, minas y todo lo que quede entre medias.
+    <br><br>
+    Mi objetivo no es solo la foto bonita: me interesa entender qué fue cada sitio, quién lo habitó, por qué lo dejaron y qué historia guarda entre sus paredes.
+    <br>
+    Cada post es una exploración documentada — fotos de todo lo que encontré, contexto histórico del lugar y lo que queda de él antes de que desaparezca para siempre.
+    <br><br>
 
 posts:
-  title: Title test for Post
-  text: >
-    Example text
+  title: Latest Posts
 ---
 
