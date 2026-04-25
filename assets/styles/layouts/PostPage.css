@@ -1,0 +1,172 @@
+.post-page {
+  min-height: 100vh;
+}
+
+.post-header {
+  position: relative;
+  width: 100%;
+  height: 100vh;
+  background-size: cover;
+  background-position: center;
+  background-attachment: fixed;
+  background-color: #111;
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+}
+
+.post-header::after {
+  content: '';
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0.92) 0%,
+    rgba(0, 0, 0, 0.3) 55%,
+    transparent 100%
+  );
+  pointer-events: none;
+}
+
+/* Back link */
+.post-back {
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  z-index: 10;
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 0.8rem;
+  font-weight: 300;
+  letter-spacing: 0.12em;
+  opacity: 0.65;
+  transition: opacity 0.2s ease;
+}
+
+.post-back:hover {
+  opacity: 1;
+  color: #ffffff;
+}
+
+/* Title + meta */
+.post-header__info {
+  position: relative;
+  z-index: 10;
+  padding: 0 2.5rem 3.5rem;
+}
+
+.post-header__title {
+  font-size: 4rem;
+  font-weight: 700;
+  margin: 0 0 0.6rem;
+  letter-spacing: 0.01em;
+  line-height: 1.1;
+}
+
+.post-header__meta {
+  font-size: 0.8rem;
+  font-weight: 300;
+  opacity: 0.65;
+  letter-spacing: 0.1em;
+  margin: 0;
+  display: flex;
+  gap: 0.6rem;
+  align-items: center;
+  text-transform: uppercase;
+}
+
+.post-header__location::before {
+  content: '/';
+  margin-right: 0.6rem;
+  opacity: 0.5;
+}
+
+/* ── Text content ─────────────────────────────────────── */
+.post-content {
+  max-width: 660px;
+  margin: 5rem auto;
+  padding: 0 2rem;
+  font-size: 1.05rem;
+  font-weight: 300;
+  line-height: 1.85;
+  opacity: 0.85;
+}
+
+/* ── Gallery ──────────────────────────────────────────── */
+.post-gallery {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 0.6rem;
+  margin: 0 10%;
+}
+
+.post-gallery__item {
+  overflow: hidden;
+}
+
+.post-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.5s ease;
+}
+
+.post-gallery__item:hover img {
+  transform: scale(1.03);
+}
+
+/*
+  Types:
+    horizontal — 3:2  · 1 columna  (paisajes, planos generales)
+    vertical   — 2:3  · 1 columna  (detalles en altura, retratos)
+    panorama   — 16:7 · 2 columnas (apertura de reportaje, gran angular)
+    wide       — 16:9 · 2 columnas (plano amplio, cielos, fachadas)
+*/
+.post-gallery__item--horizontal { aspect-ratio: 3 / 2; }
+.post-gallery__item--vertical   { aspect-ratio: 2 / 3; }
+.post-gallery__item--panorama   { grid-column: span 2; aspect-ratio: 16 / 7; }
+.post-gallery__item--wide       { grid-column: span 2; aspect-ratio: 16 / 9; }
+
+/* ── Responsive ───────────────────────────────────────── */
+@media screen and (max-width: 768px) {
+  .post-header__title {
+    font-size: 2.5rem;
+  }
+
+  .post-header__info {
+    padding: 0 1.5rem 2.5rem;
+  }
+
+  .post-gallery {
+    grid-template-columns: 1fr;
+    margin: 0 4%;
+  }
+
+  /* En móvil, todos ocupan una columna y usan ratio horizontal */
+  .post-gallery__item--panorama,
+  .post-gallery__item--wide {
+    grid-column: span 1;
+    aspect-ratio: 3 / 2;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .post-header__title {
+    font-size: 1.8rem;
+  }
+
+  .post-header__info {
+    padding: 0 1.2rem 2rem;
+  }
+
+  .post-back {
+    top: 1.2rem;
+    left: 1.2rem;
+  }
+
+  .post-gallery {
+    margin: 0 3%;
+    gap: 0.5rem;
+  }
+}

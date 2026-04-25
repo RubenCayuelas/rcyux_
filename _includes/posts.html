@@ -1,38 +1,22 @@
-<!-- <section class="posts-list">
-  {% for post in site.posts %}
-    <article class="post-preview mb-4">
-      <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-      <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-      <p>{{ post.excerpt }}</p>
-      <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
-    </article>
-  {% endfor %}
-</section> -->
-<style>
-  .posts-list {
-    margin: 5% 5% 0;
-  }
-</style>
-
 <section class="posts-list">
   {% if site.posts.size == 0 %}
-    <div class="posts-container" data-empty="true">
-      <h2>No posts found.</h2>
-    </div>
+    <p class="posts-empty">No posts yet.</p>
   {% else %}
-    <div class="posts-container">
-      <h2>Showing {{ site.posts.size }} posts.</h2> <!-- ToDo: Remove this later -->
+    <div class="posts-grid">
       {% for post in site.posts %}
-  
-  
-        <article class="post-preview mb-4">
-          <h2><a href="{{ post.url | relative_url }}">{{ post.title }}</a></h2>
-          <p class="post-meta">{{ post.date | date: "%B %d, %Y" }}</p>
-          <p>{{ post.excerpt }}</p>
-          <a href="{{ post.url | relative_url }}" class="btn btn-primary">Read More</a>
-        </article>
-  
-  
+        <a href="{{ post.url | relative_url }}" class="post-card">
+          <div
+            class="post-card__image{% unless post.cover_image %} post-card__image--empty{% endunless %}"
+            {% if post.cover_image %}style="background-image: url('{{ post.cover_image | relative_url }}')"{% endif %}
+          ></div>
+          <div class="post-card__overlay">
+            <h3 class="post-card__title">{{ post.title }}</h3>
+            <span class="post-card__meta">
+              {{ post.date | date: "%d.%m.%Y" }}
+              {% if post.location %}<span class="post-card__location">{{ post.location }}</span>{% endif %}
+            </span>
+          </div>
+        </a>
       {% endfor %}
     </div>
   {% endif %}
