@@ -3,6 +3,7 @@ layout: post
 title: "Minas del Tarsis"
 date: 2024-07-15
 categories: urbex
+description: "Exploración de los antiguos talleres de las Minas de Tharsis, en Huelva. Un complejo industrial abandonado a finales del siglo XX con décadas de historia minera."
 cover_image: /assets/images/posts/tarsis/cover.jpg
 location: "Talleres de las Minas de Tharsis, Huelva"
 images:

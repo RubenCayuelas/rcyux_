@@ -29,6 +29,9 @@ cover_image: /assets/images/posts/place-name/cover.jpg
 # Free format: city, type of place, country...
 location: "City, Country"
 
+# SEO: shown in Google results and social media previews (max ~160 chars)
+description: ""
+
 # ─────────────────────────────────────────────────────────
 #  IMAGE GALLERY
 #  Each entry has the following fields:
