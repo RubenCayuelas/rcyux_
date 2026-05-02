@@ -1,28 +1,25 @@
 @font-face {
   font-family: 'DEM-MOMono';
-  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-300.otf') format('opentype');
+  src: url('../fonts/DEM-MO_Mono_ES/DEM-MOMono-300-ES.otf') format('opentype');
   font-weight: 300;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 @font-face {
   font-family: 'DEM-MOMono';
-  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-400.otf') format('opentype');
+  src: url('../fonts/DEM-MO_Mono_ES/DEM-MOMono-400-ES.otf') format('opentype');
   font-weight: 400;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 @font-face {
   font-family: 'DEM-MOMono';
-  src: url('../fonts/DEM-MO_Mono/DEM-MOMono-700.otf') format('opentype');
+  src: url('../fonts/DEM-MO_Mono_ES/DEM-MOMono-700-ES.otf') format('opentype');
   font-weight: 700;
   font-style: normal;
   font-display: swap;
-  unicode-range: U+0020-007E, U+2000-206F, U+2019, U+201C, U+201D;
 }
 
 body {
