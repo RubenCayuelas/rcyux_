@@ -131,6 +131,42 @@
       </section>
     {% endif %}
 
+    <!-- Scroll to top -->
+    <div class="scroll-top-wrap" id="scrollTopWrap">
+      <button class="scroll-top" id="scrollTop" aria-label="Volver arriba">↑</button>
+    </div>
+    <script>
+      (function () {
+        var wrap = document.getElementById('scrollTopWrap');
+        var btn  = document.getElementById('scrollTop');
+        var idleTimer = null;
+        var isMobile = window.matchMedia('(max-width: 768px)').matches;
+
+        function showBtn() {
+          if (window.scrollY > 400) wrap.classList.add('scroll-top-wrap--visible');
+        }
+        function hideBtn() {
+          wrap.classList.remove('scroll-top-wrap--visible');
+        }
+
+        window.addEventListener('scroll', function () {
+          if (isMobile) {
+            hideBtn();
+            clearTimeout(idleTimer);
+            if (window.scrollY > 400) {
+              idleTimer = setTimeout(showBtn, 900);
+            }
+          } else {
+            wrap.classList.toggle('scroll-top-wrap--visible', window.scrollY > 400);
+          }
+        }, { passive: true });
+
+        btn.addEventListener('click', function () {
+          window.scrollTo({ top: 0, behavior: 'smooth' });
+        });
+      })();
+    </script>
+
     <br><br><br>
     <!-- Footer -->
     {% include footer.html %}
