@@ -142,7 +142,6 @@
     margin: 0 4%;
   }
 
-  /* En móvil, todos ocupan una columna y usan ratio horizontal */
   .post-gallery__item--panorama,
   .post-gallery__item--wide {
     grid-column: span 1;

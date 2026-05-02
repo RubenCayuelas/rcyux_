@@ -1,14 +1,26 @@
-<!-- ToDo: Update footer on post versions -->
-<footer class="text-center" style="background-color:#ff0000; position:fixed; width:100%; bottom:0;">
-  <p class="m-0 py-2">
-    WIP preview version || © 2025 rcyux_ All content licensed under
+<footer class="site-footer">
+  <div class="footer-inner">
     <a
+      class="footer-copy"
       href="https://creativecommons.org/licenses/by-nc/4.0/"
       target="_blank"
       rel="noopener noreferrer"
-      class="text-light text-decoration-underline"
+      aria-label="Contenido bajo licencia CC BY-NC 4.0"
+    >© {{ 'now' | date: "%Y" }} rcyux_</a>
+    <a
+      class="footer-ig"
+      href="https://www.instagram.com/rcyux_/"
+      target="_blank"
+      rel="noopener noreferrer"
+      aria-label="Instagram de rcyux_"
     >
-      CC BY-NC 4.0
-    </a>.
-  </p>
+      <svg xmlns="http://www.w3.org/2000/svg" width="35" height="35" viewBox="0 0 24 24" fill="none" 
+           stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+        <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+        <circle cx="12" cy="12" r="4"/>
+        <circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/>
+      </svg>
+      rcyux_
+    </a>
+  </div>
 </footer>
