@@ -25,6 +25,7 @@ description: >-
   Blog de urbex en España. Exploraciones documentadas de lugares abandonados: fábricas, minas, hospitales y edificios olvidados por el tiempo.
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://rcyux.es"
+permalink: /:categories/:year/:month/:day/:title/
 github_username:  RubenCayuelas
 lang: es
 excerpt_separator: "<!--more-->"
