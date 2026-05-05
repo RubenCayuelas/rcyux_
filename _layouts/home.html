@@ -7,7 +7,7 @@
     <link rel="icon" href="{{ '/assets/images/favicon.ico' | relative_url }}" type="image/x-icon"/>
 
     <!-- SEO -->
-    {% assign seo_description = page.description.text | default: site.description | strip_html | strip_newlines | truncate: 160 %}
+    {% assign seo_description = page.seo_description | default: page.description.text | default: site.description | strip_html | strip_newlines | truncate: 160 %}
     <meta name="description" content="{{ seo_description }}">
     <meta name="author" content="{{ site.author | default: site.title }}">
     <link rel="canonical" href="{{ page.url | absolute_url }}">

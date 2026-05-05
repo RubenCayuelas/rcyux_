@@ -2,6 +2,7 @@
 layout: home
 
 title: rcyux_
+seo_description: "Urbex en España — exploraciones documentadas de fábricas, minas, hospitales y edificios abandonados. Fotos, historia y lo que queda antes de que desaparezca."
 description: 
   title: 'Urbex: Memorias Olvidadas'
   collage:
