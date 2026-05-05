@@ -1,6 +1,8 @@
 # rcyux_
 
-> *A detailed project description will be added in the future.*
+> Urban exploration blog based in Spain. Documented explorations of abandoned places: factories, mines, hospitals, and buildings forgotten by time.
+
+Static site generated with [Jekyll](https://jekyllrb.com) and published at [rcyux.es](https://rcyux.es). Features a custom theme with its own typography, responsive styles, and support for multiple screen sizes.
 
 ## Requirements
 
